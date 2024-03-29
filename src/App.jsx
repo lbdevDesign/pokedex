@@ -19,6 +19,7 @@ function App() {
 
   return (
     <div className="flex flex-col items-center bg-[url('./assets/forest.jpeg')] ">
+      <h1>Là je modifie le fichier</h1>
       <div className="w-11/12 bg-white p-12 max-w-7xl flex justify-center rounded-b-lg">
         <img src={logo} alt="Logo" className="h-44" />
       </div>
