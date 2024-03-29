@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import PokemonPage from './pages/pokemonSingle';
+import { PokemonProvider } from './data/pokeContext';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -18,11 +19,13 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RouterProvider router={router}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </RouterProvider>
+  <PokemonProvider>
+    <RouterProvider router={router}>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </RouterProvider>
+  </PokemonProvider>
 );
 
 
