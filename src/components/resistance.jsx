@@ -10,7 +10,6 @@ function Resistance(props) {
     if(props.data.multiplier === 3) style = "bg-red-200 flex justify-between p-2 px-4 rounded-lg";
     if(props.data.multiplier === 4) style = "bg-red-300 flex justify-between p-2 px-4 rounded-lg";
 
-    console.log(props);
     return(
         <div className={style}>
             <p className="font-bold">{props.data.name} :</p>

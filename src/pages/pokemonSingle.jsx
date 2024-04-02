@@ -12,11 +12,12 @@ function PokemonPage() {
     const pokemon = data[id - 1];
     const imgPath = pokemon.sprites.regular
     
+    console.log(pokemon);
 
     return(
-        <div className="h-screen w-screen flex justify-center items-center bg-[url('./assets/forest.jpeg')] py-11">
+        <div className="min-h-screen flex justify-center items-center bg-[url('./assets/forest.jpeg')] py-11">
             <div className="grid grid-cols-3 grid-rows-1 gap-4 m-auto w-10/12">
-                <div className="flex flex-col items-center bg-white	rounded-lg p-11">
+                <div className="flex flex-col items-center bg-white	rounded-lg p-11 h-fit sticky top-11">
                     <h2 className="text-xl">{pokemon.name.jp}</h2>
                     <h1 className="text-xl">{pokemon.name.fr}</h1>
                     <div className="bg-white rounded-lg mb-4 text-center">
@@ -33,7 +34,6 @@ function PokemonPage() {
                         </div>      
                     </div>
                     <div className="w-full mt-4 bg-slate-100 p-4 rounded-lg">
-                        <p className="font-medium">Capture : {pokemon.catch_rate}%</p>
                         <p className="font-medium">Taille : {pokemon.height}</p>
                         <p className="font-medium">Poid : {pokemon.weight}</p>
                     </div>
