@@ -27,14 +27,14 @@ function PokeCard(props) {
                                 src={props.data.sprites.regular} 
                                 alt={props.data.name.fr} 
                             />
-                            <div className='self-center'>
+                            <div className='self-center mt-2'>
                                 <h3>{props.data.name.fr}</h3>
                                 <p>#{pokeNumber}</p>
                             </div>
                         </div>
                         <div className="flex flex-col gap-2 justify-start">
                             {typesArray.map((type, index) => (
-                                <PokeType key={index} type={type}/>
+                                <PokeType key={index} type={type} size="small"/>
                             ))}
                         </div>
                     </div>
