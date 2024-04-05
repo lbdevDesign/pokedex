@@ -3,10 +3,12 @@ import PokeCard from "./components/card";
 import logo from "./assets/Pokémon_logo.png";
 import { PokemonContext } from "./data/pokeContext";
   
+/**
+ * App component: Renders the main application UI, including the logo and Pokemon cards.
+ * Fetches Pokemon data from the provided context.
+ */
 function App() {
-  const pokemons = useContext(PokemonContext)
-
-//  console.log(pokemons);
+  const pokemons = useContext(PokemonContext) // Get Pokemon data from context
 
   return (
     <div className="flex flex-col items-center bg-[url('./assets/forest.jpeg')] ">
@@ -15,7 +17,7 @@ function App() {
       </div>
       <div className="grid grid-cols-1 gap-8 w-11/12 max-w-7xl my-8 min-[768px]:grid-cols-2 min-[1140px]:grid-cols-3 ">
         {pokemons.map((pokemon, index) => (
-            <PokeCard key={index} data={pokemon} />
+            <PokeCard key={index} data={pokemon} /> // Pass Pokemon data to PokeCard component
         ))}
       </div>
     </div>

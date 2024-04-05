@@ -1,21 +1,35 @@
 import React from "react";
 
+/**
+ * Resistance component: Renders a single resistance for a Pokémon, indicating the type and its damage multiplier.
+ *
+ * @param {object} props - The props object containing resistance data.
+ * @prop {string} props.data.name - The name of the type resisted.
+ * @prop {number} props.data.multiplier - The damage multiplier for the resisted type (0 to 4).
+ */
 function Resistance(props) {
-    let style;
-    if(props.data.multiplier === 0) style = "bg-green-400 flex justify-between p-2 px-4 rounded-lg";
-    if(props.data.multiplier === 0.25) style = "bg-green-300 flex justify-between p-2 px-4 rounded-lg";
-    if(props.data.multiplier === 0.5) style = "bg-green-200 flex justify-between p-2 px-4 rounded-lg";
-    if(props.data.multiplier === 1) style = "bg-slate-100 flex justify-between p-2 px-4 rounded-lg";
-    if(props.data.multiplier === 2) style = "bg-red-100 flex justify-between p-2 px-4 rounded-lg";
-    if(props.data.multiplier === 3) style = "bg-red-200 flex justify-between p-2 px-4 rounded-lg";
-    if(props.data.multiplier === 4) style = "bg-red-300 flex justify-between p-2 px-4 rounded-lg";
 
-    return(
-        <div className={style}>
-            <p className="font-bold">{props.data.name} :</p>
-            <p>{props.data.multiplier}</p>
+    const { name, multiplier } = props.data;
+
+    // Use a lookup object for better maintainability and readability
+    const styleMap = {
+        0: "bg-green-400", 
+        0.25: "bg-green-300", 
+        0.5: "bg-green-200", 
+        1: "bg-slate-100", 
+        2: "bg-red-100", 
+        3: "bg-red-200", 
+        4: "bg-red-300", 
+    };
+
+    const style = styleMap[multiplier] || "bg-gray-300"; // Default to gray for unknown multipliers
+
+    return (
+        <div className={`flex justify-between p-2 px-4 rounded-lg ${style}`}>
+          <p className="font-bold">{name} :</p>
+          <p>{multiplier}</p>
         </div>
-    )
-}
-
-export default Resistance;
+      );
+    }
+    
+    export default Resistance;

@@ -4,16 +4,21 @@ import { PokemonContext } from "../data/pokeContext";
 import PokeType from "../components/pokeType";
 import Resistance from "../components/resistance";
 
-
+/**
+ * PokemonPage component: Renders a detailed page for a single Pokémon, including its name, image, category, types, statistics, and resistances.
+ * Fetches Pokémon data from the provided context using a dynamic route parameter.
+ */
 function PokemonPage() {
+
+    /**
+     * Fetch Pokémon data from context and extract ID from route parameters:
+     */
     const data = useContext(PokemonContext);
     const {id} = useParams();
 
     const pokemon = data[id - 1];
     const imgPath = pokemon.sprites.regular
     
-    console.log(pokemon);
-
     return(
         <div className="min-h-screen flex justify-center items-center bg-[url('./assets/forest.jpeg')] py-11">
             <div className="flex flex-col min-[940px]:grid min-[940px]:grid-cols-3 min-[940px]:grid-rows-1 gap-4 m-auto w-10/12">
