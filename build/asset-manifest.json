@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/pokedex/static/css/main.fc225a73.css",
+    "main.js": "/pokedex/static/js/main.f7fcfefc.js",
+    "static/media/Pokémon_logo.png": "/pokedex/static/media/Pokémon_logo.73735566c3ca3d51075c.png",
+    "static/media/forest.jpeg": "/pokedex/static/media/forest.26f9df04ffdccf0f494f.jpeg",
+    "static/media/Combat.svg": "/pokedex/static/media/Combat.fd89d44c35698cd65f1b.svg",
+    "static/media/Plante.svg": "/pokedex/static/media/Plante.21995b8225b347931f2a.svg",
+    "static/media/Spectre.svg": "/pokedex/static/media/Spectre.7780d1e58ef9f6fb22b1.svg",
+    "static/media/Insecte.svg": "/pokedex/static/media/Insecte.151e7205e95e923e7fa3.svg",
+    "static/media/DARK.svg": "/pokedex/static/media/DARK.465d73cb16044cba6ca1.svg",
+    "static/media/Glace.svg": "/pokedex/static/media/Glace.0883f542c96c420c81b9.svg",
+    "static/media/Sol.svg": "/pokedex/static/media/Sol.7cfc441a239c0c83dd2e.svg",
+    "static/media/Vol.svg": "/pokedex/static/media/Vol.58dbdaf95d811f475ceb.svg",
+    "static/media/Eau.svg": "/pokedex/static/media/Eau.fca77ee9400172f13bdb.svg",
+    "static/media/Fée.svg": "/pokedex/static/media/Fée.3dab9319573950d371b1.svg",
+    "static/media/Feu.svg": "/pokedex/static/media/Feu.acc02164d4ac4da5c6b7.svg",
+    "static/media/Acier.svg": "/pokedex/static/media/Acier.9af7fd3a60b64ae36469.svg",
+    "static/media/Roche.svg": "/pokedex/static/media/Roche.6438318afd77445058d4.svg",
+    "static/media/Poison.svg": "/pokedex/static/media/Poison.efcf479487da406efc2f.svg",
+    "static/media/Dragon.svg": "/pokedex/static/media/Dragon.cee51b9977f9a9bbb4f4.svg",
+    "static/media/Normal.svg": "/pokedex/static/media/Normal.1766d498cb361a7db51a.svg",
+    "static/media/Psy.svg": "/pokedex/static/media/Psy.22f80e36762f469ff16c.svg",
+    "static/media/Électrik.svg": "/pokedex/static/media/Électrik.3abe8f602b39d871a1fd.svg",
+    "index.html": "/pokedex/index.html",
+    "main.fc225a73.css.map": "/pokedex/static/css/main.fc225a73.css.map",
+    "main.f7fcfefc.js.map": "/pokedex/static/js/main.f7fcfefc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc225a73.css",
+    "static/js/main.f7fcfefc.js"
+  ]
+}
