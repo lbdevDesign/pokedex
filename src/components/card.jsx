@@ -14,7 +14,7 @@ function PokeCard(props) {
     if (!data) return null; // Handle potential missing data
 
     const pokedexId = props.data.pokedex_id;
-    const pokePath = '/pokemon/' + pokedexId;
+    const pokePath = '/pokedex/pokemon/' + pokedexId;
 
     // Format the Pokédex number with leading zeros:
     const pokeNumber = pokedexId.toString().padStart(3, "0");;

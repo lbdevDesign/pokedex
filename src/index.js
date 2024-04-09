@@ -11,11 +11,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
  */
 const router = createBrowserRouter([
   {
-    path:"/",
+    path:"/pokedex",
     element: <App />
   },
   {
-    path:"/pokemon/:id",  // Matches paths with a dynamic ID parameter
+    path:"/pokedex/pokemon/:id",  // Matches paths with a dynamic ID parameter
     element: <PokemonPage /> // Renders the PokemonPage component for individual Pokemon pages
   }
 ])
