@@ -3,25 +3,28 @@ import { useParams } from "react-router-dom";
 import { PokemonContext } from "../data/pokeContext";
 import PokeType from "../components/pokeType";
 import Resistance from "../components/resistance";
+import { useEffect } from "react";
 
 /**
  * PokemonPage component: Renders a detailed page for a single Pokémon, including its name, image, category, types, statistics, and resistances.
  * Fetches Pokémon data from the provided context using a dynamic route parameter.
  */
 function PokemonPage() {
-
     /**
      * Fetch Pokémon data from context and extract ID from route parameters:
      */
     const data = useContext(PokemonContext);
     const {id} = useParams();
-
     const pokemon = data[id - 1];
     const imgPath = pokemon.sprites.regular
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     
     return(
-        <div className="min-h-screen flex justify-center items-center bg-[url('./assets/forest.jpeg')] py-11">
-            <div className="flex flex-col min-[940px]:grid min-[940px]:grid-cols-3 min-[940px]:grid-rows-1 gap-4 m-auto w-10/12">
+        <div className="min-h-screen bg-[url('./assets/forest.jpeg')]">
+            <div className="flex flex-col min-[940px]:grid min-[940px]:grid-cols-3 min-[940px]:grid-rows-1 gap-4 m-auto w-10/12 py-11">
                 <div className="flex flex-col min-[590px]:flex-row min-[940px]:flex-col justify-center items-center bg-white rounded-lg p-11 h-fit min-[940px]:sticky min-[940px]:top-11">
                     <div className="flex flex-col items-center min-[590px]:mr-8 min-[940px]:mr-0">
                         <h2 className="text-xl">{pokemon.name.jp}</h2>
@@ -35,7 +38,7 @@ function PokemonPage() {
                         </div>
                     </div>
                     <div className="flex flex-col items-center">
-                        <p className="font-medium text-lg mb-2">{pokemon.category}</p>    
+                        <p className="font-medium text-lg mb-2 text-center">{pokemon.category}</p>    
                         <div className="flex justify-center gap-2">
                             {pokemon.types.map((type, index) => (
                                     <PokeType key={index} type={type} size="large"/>
