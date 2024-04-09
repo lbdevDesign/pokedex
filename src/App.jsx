@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import PokeCard from "./components/card";
-import logo from "./assets/Pokémon_logo.png";
+import logo from "../src/assets/pokemon_logo.png";
 import { PokemonContext } from "./data/pokeContext";
   
 /**
